@@ -10,7 +10,6 @@ const Header = () => (
     <NavLink to="/create" activeClassName="is-active">Create Topic</NavLink>
     <NavLink to="/help" activeClassName="is-active">Help</NavLink>
     <button onClick={startLogout}><a href='https://whispering-reef-72580.herokuapp.com/'>Logout</a></button>
-    <button>hello testing</button>
   </header>
 );
 
