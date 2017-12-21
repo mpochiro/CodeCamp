@@ -1,4 +1,5 @@
 import { firebase, googleAuthProvider } from '../firebase/firebase';
+import { NavLink } from 'react-router-dom';
 
 export const login = (uid) => ({
   type: 'LOGIN',
@@ -18,5 +19,6 @@ export const logout = () => ({
 export const startLogout = () => {
   return () => {
     return firebase.auth().signOut();
+    browserHistory.push('/');
   };
 };
