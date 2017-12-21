@@ -18,7 +18,7 @@ export const logout = () => ({
 
 export const startLogout = () => {
   return () => {
-    return firebase.auth().signOutWithPopup();
+    return firebase.auth().signOut();
 
   };
 };
