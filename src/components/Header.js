@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
-import PrivateRoute from './PrivateRoute';
 
 
 
@@ -21,4 +20,4 @@ const mapDispatchToProps = (dispatch) => ({
   startLogout: () => dispatch(startLogout())
 });
 
-export default connect(undefined, mapDispatchToProps)(Header)(PrivateRoute);
+export default connect(undefined, mapDispatchToProps)(Header);
