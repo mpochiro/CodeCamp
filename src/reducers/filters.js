@@ -1,5 +1,5 @@
 import moment from 'moment';
-import ExpenseForm from '../components/ExpenseForm';
+import TopicForm from '../components/TopicForm';
 
 // Filters Reducer
 
