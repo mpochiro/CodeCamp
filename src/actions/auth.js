@@ -19,7 +19,6 @@ export const logout = () => ({
 export const startLogout = () => {
   return () => {
     return firebase.auth().signOut();
-    localStorage.clear();
 
   };
 };
