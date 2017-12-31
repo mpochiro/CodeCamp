@@ -11,7 +11,7 @@ const Header = () => (
     <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
     <NavLink to="/create" activeClassName="is-active">Create Topic</NavLink>
     <NavLink to="/help" activeClassName="is-active">Help</NavLink>
-    <button onClick={startLogout}>Logout</button>
+    <button onClick={startLogout}><a href='https://whispering-reef-72580.herokuapp.com/'>Logout</a></button>
     <button>test</button>
   </header>
 );
@@ -21,6 +21,3 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default connect(undefined, mapDispatchToProps)(Header);
-
-
-{/* <a href='https://whispering-reef-72580.herokuapp.com/'>Logout</a> */}
