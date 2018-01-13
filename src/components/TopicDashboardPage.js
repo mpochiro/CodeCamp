@@ -4,7 +4,7 @@ import TopicListFilters from './TopicListFilters';
 
 const TopicDashboardPage = () => (
   <div>
-    <TopicListFilters />
+    <TopicListFilters  className="float-right"/>
     <TopicList />
   </div>
 );

@@ -11,7 +11,7 @@ export class AddTopicPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Add Topic</h1>
+        <h1 className="center-spread">Add Topic</h1>
         <TopicForm
           onSubmit={this.onSubmit}
         />

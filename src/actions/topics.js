@@ -1,7 +1,7 @@
 import uuid from 'uuid';
 import database from '../firebase/firebase';
 
-// ADD_EXPENSE
+// ADD_TOPIC
 export const addTopic = (topic) => ({
   type: 'ADD_TOPIC',
   topic
@@ -16,7 +16,6 @@ export const startAddTopic = (topicData = {}) => {
       createdAt = 0
     } = topicData;
     const topic = { description, note, createdAt };
-
     return database.ref(`users/${uid}/topic`).push(topic).then((ref) => {
       dispatch(addTopic({
         id: ref.key,
@@ -26,7 +25,7 @@ export const startAddTopic = (topicData = {}) => {
   };
 };
 
-// REMOVE_EXPENSE
+// REMOVE_TOPIC
 export const removeTopic = ({ id } = {}) => ({
   type: 'REMOVE_TOPIC',
   id
@@ -41,7 +40,7 @@ export const startRemoveTopic = ({ id } = {}) => {
   };
 };
 
-// EDIT_EXPENSE
+// EDIT_TOPIC
 export const editTopic = (id, updates) => ({
   type: 'EDIT_TOPIC',
   id,
@@ -57,7 +56,7 @@ export const startEditTopic = (id, updates) => {
   };
 };
 
-// SET_EXPENSES
+// SET_TOPICS
 export const setTopics = (topics) => ({
   type: 'SET_TOPICS',
   topics

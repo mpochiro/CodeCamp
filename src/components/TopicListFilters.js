@@ -20,9 +20,10 @@ class TopicListFilters extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="object-center-space__filters">
         <input
           type="text"
+          placeholder="Search for Topics"
           value={this.props.filters.text}
           onChange={this.onTextChange}
         />

@@ -1,4 +1,4 @@
-// Expenses Reducer
+// Topics Reducer
 
 const topicsReducerDefaultState = [];
 

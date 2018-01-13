@@ -6,14 +6,19 @@ import { startLogout } from '../actions/auth';
 
 
 const Header = () => (
-  <header>
-    <h1>Blog Example App</h1>
-    <NavLink to="/" activeClassName="is-active" exact={true}>Dashboard</NavLink>
-    <NavLink to="/create" activeClassName="is-active">Create Topic</NavLink>
-    <NavLink to="/help" activeClassName="is-active">Help</NavLink>
-    <button onClick={startLogout}><a href='https://whispering-reef-72580.herokuapp.com/'>Logout</a></button>
-    <button>test</button>
+
+  <header className="header">
+
+
+    <h1 className="header__title">Journal Example App</h1>
+    <div className="center-spread">
+    <NavLink to="/" activeClassName="is-active" className="button center-spread" exact={true}>Dashboard</NavLink>
+    <NavLink to="/create" activeClassName="is-active" className="button center-spread" >Create Topic</NavLink>
+    <NavLink to="/topics" activeClassName="is-active" className="button center-spread" >Comments</NavLink>
+    <button className="button" onClick={startLogout}><a href='https://whispering-reef-72580.herokuapp.com/'>Logout</a></button>
+    </div>
   </header>
+
 );
 
 const mapDispatchToProps = (dispatch) => ({

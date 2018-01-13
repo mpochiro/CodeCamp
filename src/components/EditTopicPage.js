@@ -5,8 +5,11 @@ import { startEditTopic, startRemoveTopic } from '../actions/topics';
 
 export class EditTopicPage extends React.Component {
   onSubmit = (topic) => {
+    console.trace(topic);
+
     this.props.startEditTopic(this.props.topic.id, topic);
     this.props.history.push('/');
+
   };
   onRemove = () => {
     this.props.startRemoveTopic({ id: this.props.topic.id });
@@ -15,6 +18,8 @@ export class EditTopicPage extends React.Component {
   render() {
     return (
       <div>
+        <h1>Edit your Topic here!</h1>
+
         <TopicForm
           topic={this.props.topic}
           onSubmit={this.onSubmit}
@@ -26,7 +31,7 @@ export class EditTopicPage extends React.Component {
 };
 
 const mapStateToProps = (state, props) => ({
-  expense: state.topics.find((topic) => topic.id === props.match.params.id)
+  topic: state.topics.find((topic) => topic.id === props.match.params.id)
 });
 
 const mapDispatchToProps = (dispatch, props) => ({

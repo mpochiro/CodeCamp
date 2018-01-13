@@ -73,13 +73,18 @@ export default class TopicForm extends React.Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
-          <textarea
+          <div>
+          <textarea rows="4" cols="50"
+            className="padding"
             placeholder="Enter in your blog content here"
             value={this.state.note}
             onChange={this.onNoteChange}
           >
           </textarea>
+          <div>
           <button>Add Topic</button>
+          </div>
+          </div>
         </form>
       </div>
     )

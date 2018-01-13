@@ -4,8 +4,10 @@ import { Provider } from 'react-redux';
 import AppRouter, { history } from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { startSetTopics } from './actions/topics';
+import { startSetComments } from './actions/comments';
 import { login, logout } from './actions/auth';
 import getVisibleTopics from './selectors/topics';
+import getVisibleComments from './selectors/comments';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
@@ -33,13 +35,28 @@ firebase.auth().onAuthStateChanged((user) => {
     store.dispatch(startSetTopics()).then(() => {
       renderApp();
       if (history.location.pathname === '/') {
-        history.push('/dashboard');
+        history.push('/');
       }
     });
   } else {
     store.dispatch(logout());
     renderApp();
-    localStorage.clear();
+    history.push('/');
+  }
+});
+
+firebase.auth().onAuthStateChanged((user) => {
+  if (user) {
+    store.dispatch(login(user.uid));
+    store.dispatch(startSetComments()).then(() => {
+      renderApp();
+      if (history.location.pathname === '/topics') {
+        history.push('/topics');
+      }
+    });
+  } else {
+    store.dispatch(logout());
+    renderApp();
     history.push('/');
   }
 });
