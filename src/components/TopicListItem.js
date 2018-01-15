@@ -13,7 +13,7 @@ const TopicListItem = ({ id, description, createdAt, note }) => (
     <Link to={`/edit/${id}`}>
       </Link>
       <p>{note}</p>
-      <Link to={`/make/comment`}>Add Comment</Link>
+      <Link to={`/make/comment`}>Add Footnote</Link>
   </div>
 
 );

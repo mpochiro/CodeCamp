@@ -18,7 +18,7 @@ export default class CommentForm extends React.Component {
     e.preventDefault();
 
     if (!this.state.opinion) {
-      this.setState(() => ({ error: 'Fine don\'t leave a comment see if I care...' }));
+      this.setState(() => ({ error: 'Fine don\'t leave a footnote see if I care...' }));
     } else {
       this.setState(() => ({ error: '' }));
       this.props.onSubmit({
@@ -33,13 +33,13 @@ export default class CommentForm extends React.Component {
         <form onSubmit={this.onSubmit}>
           <textarea rows="4" cols="50"
             type="text"
-            placeholder="Enter your Comment here!"
+            placeholder="Enter your Footnote here!"
             value={this.state.opinion}
             onChange={this.onOpinionChange}
           >
           </textarea>
           <div>
-          <button>Add Comment</button>
+          <button className="button">Add Footnote</button>
           </div>
         </form>
       </div>

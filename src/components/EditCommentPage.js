@@ -16,13 +16,13 @@ export class EditCommentPage extends React.Component {
   };
   render() {
     return (
-      <div>
-        <h1>Edit your Comments here!!</h1>
+      <div className="texture">
+        <h1>Edit your Footnotes here!!</h1>
         <CommentForm
           comment={this.props.comment}
           onSubmit={this.onSubmit}
         />
-        <button onClick={this.onRemove}>Remove</button>
+        <button className="button" onClick={this.onRemove}>Remove</button>
       </div>
     );
   }

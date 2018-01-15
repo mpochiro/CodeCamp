@@ -1,0 +1,13 @@
+.footnote{
+  background:url('/images/footnote.jpg') fade-out(white, .80);
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  font-style: oblique;
+  font-weight: bold;
+
+}
+
+.footnote:hover{
+  color: black;
+}

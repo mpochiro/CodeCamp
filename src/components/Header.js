@@ -14,7 +14,7 @@ const Header = () => (
     <div className="center-spread">
     <NavLink to="/" activeClassName="is-active" className="button center-spread" exact={true}>Dashboard</NavLink>
     <NavLink to="/create" activeClassName="is-active" className="button center-spread" >Create Topic</NavLink>
-    <NavLink to="/topics" activeClassName="is-active" className="button center-spread" >Comments</NavLink>
+    <NavLink to="/topics" activeClassName="is-active" className="button center-spread" >Footnotes</NavLink>
     <button className="button" onClick={startLogout}><a href='https://whispering-reef-72580.herokuapp.com/'>Logout</a></button>
     </div>
   </header>

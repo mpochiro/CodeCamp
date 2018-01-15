@@ -3,7 +3,7 @@ import TopicList from './TopicList';
 import TopicListFilters from './TopicListFilters';
 
 const TopicDashboardPage = () => (
-  <div>
+  <div className="texture">
     <TopicListFilters  className="float-right"/>
     <TopicList />
   </div>

@@ -17,14 +17,14 @@ export class EditTopicPage extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="texture">
         <h1>Edit your Topic here!</h1>
 
         <TopicForm
           topic={this.props.topic}
           onSubmit={this.onSubmit}
         />
-        <button onClick={this.onRemove}>Remove</button>
+        <button className="button" onClick={this.onRemove}>Remove</button>
       </div>
     );
   }

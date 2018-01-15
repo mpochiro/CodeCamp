@@ -7,7 +7,7 @@ export const CommentList = (props) => (
   <div className="object-center-space__filters">
     {
       props.comments.length === 0 ? (
-        <p>No Comments</p>
+        <p>No Footnotes</p>
       ) : (
           props.comments.map((comment) => {
             return <CommentListItem key={comment.id} {...comment} />;

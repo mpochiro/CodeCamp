@@ -4,12 +4,15 @@ import CommentsList from './CommentsList';
 
 const PublicTopicPage = () => (
   <div>
-    <h1>Comment Section</h1>
+    <div className="texture">
+    <h1 className="object-center-space__filters">Existing Topics</h1>
     <TopicListComments />
-    <h1 className="center-spread">Comments Section</h1>
+    </div>
+    <div className="footnote">
+    <h1 className="center-spread">Footnotes Section</h1>
 
     <CommentsList />
-
+    </div>
 
   </div>
 );

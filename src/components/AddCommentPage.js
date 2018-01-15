@@ -10,9 +10,9 @@ export class AddCommentPage extends React.Component {
   };
   render() {
     return (
-      <div>
-        <h1>Add Comment</h1>
-        <CommentForm
+      <div className="texture">
+        <h1>Add Footnote</h1>
+        <CommentForm 
           onSubmit={this.onSubmit} />
 
       </div>

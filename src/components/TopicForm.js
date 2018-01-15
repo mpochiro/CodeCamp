@@ -82,7 +82,7 @@ export default class TopicForm extends React.Component {
           >
           </textarea>
           <div>
-          <button>Add Topic</button>
+          <button className="button">Add Topic</button>
           </div>
           </div>
         </form>
